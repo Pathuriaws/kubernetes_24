@@ -1,7 +1,8 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: my-storage-class
-provisioner: kubernetes.io/gce-pd
+  name: my-aws-storage-class
+provisioner: kubernetes.io/aws-ebs
 parameters:
-  type: pd-standard
+  type: gp2
+  encrypted: "true"
